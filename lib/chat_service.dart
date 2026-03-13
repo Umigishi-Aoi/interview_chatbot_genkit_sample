@@ -11,10 +11,10 @@ class ChatMessage {
 }
 
 class ChatService {
-  late final RemoteAction<Map<String, dynamic>, String, void, void> _chatAction;
+  late final RemoteAction _chatAction;
 
   ChatService({String baseUrl = 'http://localhost:8080'}) {
-    _chatAction = defineRemoteAction<Map<String, dynamic>, String, void, void>(
+    _chatAction = defineRemoteAction(
       url: '$baseUrl/interviewChat',
       outputSchema: SchemanticType.string(),
     );

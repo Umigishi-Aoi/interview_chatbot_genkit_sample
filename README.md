@@ -104,7 +104,7 @@ await startFlowServer(flows: [chatFlow], port: 8080, cors: {'origin': '*'});
 ### Flutter側 — defineRemoteAction
 
 ```dart
-final chatAction = defineRemoteAction<Map<String, dynamic>, String, void, void>(
+final chatAction = defineRemoteAction(
   url: 'http://localhost:8080/interviewChat',
   outputSchema: SchemanticType.string(),
 );
